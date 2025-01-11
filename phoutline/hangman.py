@@ -5,7 +5,6 @@ def hangman():
     print("Rules:")
     print("1. You need to guess the letters of a secret word.")
     print("2. You have a limited number of attempts to guess the word correctly.")
-    print("3. You can use up to 3 tips. When you use a tip, you'll be given 3 letters to choose from for the first blank position.")
 
     words = ["glue", "rope", "twine", "patch", "straw"]
     word = random.choice(words)  # Randomly select a word
@@ -37,7 +36,7 @@ def hangman():
                 print("Congratulations! You guessed the word:", word)
                 return 0
         except ValueError:
-            print("Invalid input. Please enter a valid number.")
+            print("Invalid input. Please enter a valid letter.")
 
     if "_" in current_state:
         print("Out of attempts! The word was:", word)
