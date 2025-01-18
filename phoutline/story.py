@@ -62,17 +62,6 @@ def main():
         exit()
     print("Yippeeee!!!! You have saved Clover and her farm!")    
 
-    
-
-        
-
-
-
-
-
-
-
-
 
 if __name__=="__main__":
     main()    

@@ -1,5 +1,5 @@
 def decode():
-    print("You must decode the word within 3 attempts and input the correct word to pass!")
+    print(f"You must decode the word within {max_attempts} attempts and input the correct word to pass!")
     print("The scrambled time is: tighdnmi")
     
     answer = "midnight"

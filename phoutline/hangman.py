@@ -15,32 +15,27 @@ def hangman():
     print("Current state:", " ".join(current_state))
 
     while attempts > 0:
-        try:
-            guess = input("Enter a letter: ").strip().lower()
-            if len(guess) != 1 or not guess.isalpha():
-                print("Please enter a valid single letter.")
-                continue
+        guess = input("Enter a letter: ").strip().lower()
+        if len(guess) != 1 or not guess.isalpha():
+            print("Please enter a valid single letter.")
+            continue
 
-            if guess in word:
-                for i, letter in enumerate(word):
-                    if letter == guess:
-                        current_state[i] = guess
-                print("Correct! Updated state:", " ".join(current_state))
-            else:
-                print("Wrong guess.")
+        if guess in word:
+            i = 0
+            for letter in word:
+                if letter == guess:
+                    current_state[i] = guess
+                i += 1    
+            print("Correct! Updated state:", " ".join(current_state))
+        else:
+            print("Wrong guess.")
 
-            attempts -= 1
-            print(f"Attempts remaining: {attempts}")
+        attempts -= 1
+        print(f"Attempts remaining: {attempts}")
 
-            if "_" not in current_state:
-                print("Congratulations! You guessed the word:", word)
-                return 0
-        except ValueError:
-            print("Invalid input. Please enter a valid letter.")
+        if "_" not in current_state:
+            print("Congratulations! You guessed the word:", word)
+            return 0
 
-    if "_" in current_state:
-        print("Out of attempts! The word was:", word)
-        return -1
-
-#if __name__ == "__main__":
-    #hangman_game()
+    print("Out of attempts! The word was:", word)
+    return -1
