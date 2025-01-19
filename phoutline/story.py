@@ -12,7 +12,7 @@ def main():
     print("Life on the farm is usually peaceful for Clover the pig, but this week is no ordinary week.")
     print("Mischievous critters, wild weather, and sneaky thieves are after Clover the pig's precious crops.")
     print("Your lives are turnips— lose one each time you fail a mini-game. Lose them all, and the farm is doomed!")
-    print("You currently have 2 turnips.")
+    print(f"You currently have {turnips} turnips.")
     print("Help Clover conquer challenges and save the crops. Can you keep all the turnips and protect the farm? The adventure starts now!")
 
     # Hangman
@@ -39,7 +39,7 @@ def main():
     # Guess the Number
     print("\nDay 3:")
     print("A section of the fence has collapsed, letting critters sneak in.")
-    print("Clover must measure the perfect length of wood needed to fix it.")
+    print("Clover must guess the perfect length of wood needed to fix it.")
     print("Guess the correct number within a limited range before the critters invade.")
     print("If Clover fails, she loses another precious turnip.\n")
     turnips += guess_the_number()
@@ -55,7 +55,7 @@ def main():
     print("But, the letters are all scrambled up!")
     print("You must unscramble the letters to save Clover and her farm.")
     print("If you solve the puzzle in time, Clover catches the thief red-handed and saves her crops.")
-    print("Fail, and the thief escapes with the crops, costing Clover all of her turnips.")
+    print("Fail, and the thief escapes with the crops, costing Clover all of her turnips.\n")
     if decode() == -1:
         print("Oh no! You have lost all of your turnips, and Clovers farm was attacked by the crop theif!")
         print("Better luck next time!")
@@ -63,5 +63,5 @@ def main():
     print("Yippeeee!!!! You have saved Clover and her farm!")    
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
     main()    

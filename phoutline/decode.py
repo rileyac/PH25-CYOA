@@ -1,11 +1,11 @@
 def decode():
-    print(f"You must decode the word within {max_attempts} attempts and input the correct word to pass!")
-    print("The scrambled time is: tighdnmi")
-    
     answer = "midnight"
     guess = ""
     turn = 0
-    max_attempts = 3 
+    max_attempts = 3
+    
+    print(f"You must decode the word within {max_attempts} attempts and input the correct word to pass!")
+    print("The scrambled time is: tighdnmi") 
     
     while guess != answer and turn < max_attempts:
         if turn > 0:
