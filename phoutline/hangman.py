@@ -8,7 +8,7 @@ def hangman():
 
     words = ["glue", "rope", "twine", "patch", "straw"]
     word = random.choice(words)  # Randomly select a word
-    current_state = ["_" for _ in word]  # Initialize blank state
+    current_state = ["_"] * len(word)  # Initialize blank state
     attempts = len(word) + 3  # Allow attempts equal to the length of the word plus 3
 
     print("The missing word has", len(word), "letters.")
